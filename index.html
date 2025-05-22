@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سازنده پسورد ایمن - پارسا باقرزاده</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔒 سازنده پسورد ایمن</h1>
+            <p class="creator">ساخته شده توسط پارسا باقرزاده</p>
+        </header>
+
+        <div class="form-section">
+            <div class="form-group">
+                <label for="siteName">نام سرویس:</label>
+                <input type="text" id="siteName" placeholder="مثال: حساب گوگل">
+            </div>
+            
+            <div class="form-group">
+                <label for="siteUrl">آدرس سایت:</label>
+                <input type="url" id="siteUrl" placeholder="مثال: https://mail.google.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="passwordLength">طول پسورد:</label>
+                <input type="range" id="passwordLength" min="8" max="64" value="16">
+                <span id="lengthValue">16</span>
+            </div>
+            
+            <div class="options-group">
+                <label>تنظیمات پیشرفته:</label>
+                <div class="checkboxes">
+                    <label>
+                        <input type="checkbox" id="uppercase" checked>
+                        حروف بزرگ (A-Z)
+                    </label>
+                    <label>
+                        <input type="checkbox" id="lowercase" checked>
+                        حروف کوچک (a-z)
+                    </label>
+                    <label>
+                        <input type="checkbox" id="numbers" checked>
+                        اعداد (0-9)
+                    </label>
+                    <label>
+                        <input type="checkbox" id="symbols" checked>
+                        نمادها (!@#$)
+                    </label>
+                </div>
+            </div>
+            
+            <button id="generateBtn" class="generate-btn">
+                🚀 تولید پسورد
+            </button>
+        </div>
+
+        <div class="result-section" id="resultSection" style="display:none">
+            <h2>🔐 پسورد شما آماده است!</h2>
+            
+            <div class="result-box">
+                <div class="result-item">
+                    <span class="result-label">سرویس:</span>
+                    <span id="resultSiteName" class="result-value"></span>
+                </div>
+                
+                <div class="result-item">
+                    <span class="result-label">آدرس:</span>
+                    <span id="resultSiteUrl" class="result-value"></span>
+                </div>
+                
+                <div class="result-item password-item">
+                    <span class="result-label">پسورد:</span>
+                    <span id="resultPassword" class="password-value"></span>
+                    <button id="copyBtn" class="copy-btn">📋 کپی</button>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="downloadBtn" class="download-btn">
+                    💾 ذخیره در پوشه passwords
+                </button>
+                <button id="newPasswordBtn" class="new-btn">
+                    🔄 پسورد جدید
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
